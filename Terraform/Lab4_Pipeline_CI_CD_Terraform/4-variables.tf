@@ -9,7 +9,7 @@ variable "azureRegion" {
 #  Resource Group Name
 variable "resourceGroupName" {
   type    = string
-  default = "loicRG2S"
+  default = "loicRGv2"
 }
 
 

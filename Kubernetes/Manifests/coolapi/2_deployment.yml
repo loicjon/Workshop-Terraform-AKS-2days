@@ -14,7 +14,19 @@ spec:
         app: "coolapi"
     spec:
       containers:
+      
         - name: "coolapi"
           image: "acrpierrc007.azurecr.io/coolapi:1.0.0"
           ports:
           - containerPort: 3000
+          readinessProbe:
+            tcpSocket:
+              port: 3000
+            initialDelaySeconds: 10
+          ressources:
+            limits:
+            cpu: "1"
+            memory: 512Mi
+          requests:  
+             ccpu: "0.5"
+             memory: 256Mi

@@ -22,11 +22,12 @@ spec:
           readinessProbe:
             tcpSocket:
               port: 3000
-            initialDelaySeconds: 10
-          ressources:
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
             limits:
-            cpu: "1"
-            memory: 512Mi
-          requests:  
-             ccpu: "0.5"
-             memory: 256Mi
+              cpu: "1"
+              memory: 512Mi
+            requests:
+              cpu: "0.5"
+              memory: 256Mi
